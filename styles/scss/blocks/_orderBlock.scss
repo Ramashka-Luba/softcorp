@@ -1,0 +1,85 @@
+@import "./../vars";
+@import "./../mixin";
+
+.order {
+    background-image: url("./../assets/imeges/orderBg.png");
+    background-size: cover;
+    background-position: center;
+    height: 920px;
+    padding-top: 125px;
+    color: $textColorLight;
+    .order__container {
+        @extend %container;
+        .order__title {
+            @include text(36px, 700, 43px); 
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 30px;
+            span {
+                color: $primaryColor;
+            }
+        }
+        .order__scheme {
+            .scheme__title {
+                @include text(18px, 400, 22px); 
+                text-align: center;
+                margin-bottom: 80px;
+            }
+            .scheme__list {
+                display: flex;
+                justify-content: space-between;
+                text-align: center;
+                flex-wrap: wrap;
+                margin-bottom: 80px;
+                @include text(16px, 400, 19px); 
+                .scheme__item{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    width: 100%;
+                    max-width: 210px;
+                    position: relative;
+                    &:last-child  {
+                        .scheme__item-bg {
+                            &::after{
+                                display: none;
+                            }
+                        }                   
+                    }
+                    .scheme__item-bg {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50%;
+                        background: $primaryColor;
+                        border: 5px solid #286690;
+                        margin: 0 auto;
+                        &::after {
+                            content: "";
+                            display: block;
+                            width: 110px;
+                            height: 6px;
+                            background: url("./../assets/imeges/circle.png");
+                            position: absolute;
+                            top: 30%;
+                            left: 82%;
+                        }
+                        .scheme__items-icon {
+                            width: 40px;
+                            height: 40px;
+                            fill: #fff;
+                            -o-object-fit: contain;
+                            object-fit: contain;
+                        }
+                    }
+                    
+                }
+                .scheme__span {
+
+                }
+            }
+        }
+    }
+}

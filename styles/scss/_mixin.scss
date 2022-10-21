@@ -1,0 +1,53 @@
+
+@mixin text($fontSize, $fontWeight, $lineHeight) {
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    line-height: $lineHeight;
+}
+
+@mixin flexCenter() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@mixin btnMain($background,$borderColor, $color) {
+    background: $background;
+    border: 1px solid $borderColor;
+    color: $color;
+
+    @include flexCenter; 
+    text-transform: uppercase;
+    padding: 15px 10px;
+    width: 185px;
+    border-radius: 4px;
+    transition: transform 0.3s;
+    &:hover {
+        transform: scale(1.15);
+    }
+}
+
+@mixin hoverText() {
+    transition: transform 0.25s;
+    &:hover {
+        transform: scale(1.3);
+    }
+}
+
+
+
+
+
+
+// @mixin media($width, $type:min) {
+//     @if map_has_key($breakpoints, $width) {
+//         $width: map_get($breakpoints, $width);
+//         @if $type == max {
+//             $width: $width - 1px;
+//         }
+//     }
+//     @media (#{$type}-width: $width) {
+//         @content;
+//     } 
+// }

@@ -1,0 +1,43 @@
+@import "./../vars";
+@import "./../mixin";
+
+.header {
+    background: rgba(16, 16, 29, 0.9);
+    height: 100px;
+    display: flex;
+    text-transform: uppercase;
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+    .header__container {
+        @extend %container;
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+        .header__logo {
+            @include text(28px, 800, 33px); 
+            span {
+                color: $primaryColor;
+            }
+        }
+        .header__menu {
+            @include text(13px, 600, 16px); 
+            .menu__list {
+                display: flex;
+                .menu__item {
+                    margin-right: 60px;
+                    @include hoverText(); 
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    .menu__link {
+                        &.active {
+                            color: $primaryColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

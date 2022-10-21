@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Raleway:wght@800&display=swap');
+
+@import "./scss/vars";
+@import "./scss/mixin";
+
+body {
+    font-family: "Lato", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    color: #fff;
+    overflow-x: hidden;
+    background: $bgcolor;
+}
+ul,
+ol {
+    list-style: none;
+}
+a {
+    -webkit-text-decoration-skip: ink;
+    text-decoration-skip-ink: auto;
+    text-decoration: none;
+    color: currentColor;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+
+@import "./scss/blocks/headerBlock";
+@import "./scss/blocks/mainBlock";
+@import "./scss/blocks/orderBlock";
+
+
+
+
+
+
+
+

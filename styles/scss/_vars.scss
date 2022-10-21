@@ -1,0 +1,37 @@
+// Colors
+$primaryColor: #3E9CDC;
+$secondaryColor: #FFFFFF;
+$accentColor: #3D4050;
+$bgcolor: #272733;
+$textColor: #000000;
+$textColorLight: #FFFFFF;
+
+
+
+// Contaier 
+%container { 
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+    // @media screen and (min-width: 576px)  { 
+    //     padding: 0 35px;  
+    // }
+    // @media screen and (min-width: 768px)  { 
+    //     padding: 0 50px;  
+    // }
+    // @media screen and (min-width: 1280px)  { 
+    //     padding: 0; 
+    //     max-width: 1140px;
+    //     width: 100%;
+    //     margin: 0 auto;
+    // }
+}
+
+// Breakpoints
+// $breakpoints: (
+//     xs: 576px,
+//     sm: 768px,
+//     md: 1280px,
+//     lg: 1440px,
+//     xl: 1920px,
+// )

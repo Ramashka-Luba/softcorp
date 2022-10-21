@@ -1,0 +1,60 @@
+@import "./../vars";
+@import "./../mixin";
+
+.main {
+    background-image: url("./../assets/imeges/mainBg.png");
+    background-size: cover;
+    background-position: center;
+    height: 850px;
+    padding: 203px 0;
+    color: $textColor;
+    .main__container {
+        @extend %container;
+        .main__title {
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 58px;
+            text-transform: uppercase;
+            max-width: 780px;
+            margin-bottom: 80px;
+            span {
+                color: $primaryColor;
+            }
+        }
+        .main__description {
+            .main__text {
+                @include text(20px, 700, 24px); 
+                margin-bottom: 10px;
+            }
+            .main__list {
+                margin-bottom: 80px;
+                li {
+                    position: relative;
+                    padding-left: 25px;
+                    @include text(20px, 400, 30px); 
+                    &::before {
+                        content: "";
+                        display: block;
+                        width: 5px;
+                        height: 1.5px;
+                        background-color: #000;
+                        position: absolute;
+                        left: 10px;
+                        top: 50%;
+                    }
+                }
+            }
+        }
+        .main__buttons {
+            display: flex;
+            @include text(13px, 400, 16px); 
+            .main__btn-primary {
+                @include btnMain($primaryColor, $secondaryColor, $secondaryColor); 
+                margin-right: 30px;
+            }
+            .main__btn-secondary {
+                @include btnMain($secondaryColor, $accentColor, $textColor); 
+            }
+        }
+    }
+}

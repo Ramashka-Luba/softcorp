@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Raleway:wght@800&display=swap");
+.order .order__container, .main .main__container, .header .header__container {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  color: #fff;
+  overflow-x: hidden;
+  background: #272733;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  -webkit-text-decoration-skip: ink;
+  text-decoration-skip-ink: auto;
+  text-decoration: none;
+  color: currentColor;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.order .order__container, .main .main__container, .header .header__container {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header {
+  background: rgba(16, 16, 29, 0.9);
+  height: 100px;
+  display: flex;
+  text-transform: uppercase;
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 9999;
+}
+.header .header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .header__container .header__logo {
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 33px;
+}
+.header .header__container .header__logo span {
+  color: #3E9CDC;
+}
+.header .header__container .header__menu {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 16px;
+}
+.header .header__container .header__menu .menu__list {
+  display: flex;
+}
+.header .header__container .header__menu .menu__list .menu__item {
+  margin-right: 60px;
+  transition: transform 0.25s;
+}
+.header .header__container .header__menu .menu__list .menu__item:hover {
+  transform: scale(1.3);
+}
+.header .header__container .header__menu .menu__list .menu__item:last-child {
+  margin-right: 0;
+}
+.header .header__container .header__menu .menu__list .menu__item .menu__link.active {
+  color: #3E9CDC;
+}
+
+.order .order__container, .main .main__container, .header .header__container {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.main {
+  background-image: url("./../assets/imeges/mainBg.png");
+  background-size: cover;
+  background-position: center;
+  height: 850px;
+  padding: 203px 0;
+  color: #000000;
+}
+.main .main__container .main__title {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+  text-transform: uppercase;
+  max-width: 780px;
+  margin-bottom: 80px;
+}
+.main .main__container .main__title span {
+  color: #3E9CDC;
+}
+.main .main__container .main__description .main__text {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+.main .main__container .main__description .main__list {
+  margin-bottom: 80px;
+}
+.main .main__container .main__description .main__list li {
+  position: relative;
+  padding-left: 25px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+}
+.main .main__container .main__description .main__list li::before {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 1.5px;
+  background-color: #000;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+}
+.main .main__container .main__buttons {
+  display: flex;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+}
+.main .main__container .main__buttons .main__btn-primary {
+  background: #3E9CDC;
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  padding: 15px 10px;
+  width: 185px;
+  border-radius: 4px;
+  transition: transform 0.3s;
+  margin-right: 30px;
+}
+.main .main__container .main__buttons .main__btn-primary:hover {
+  transform: scale(1.15);
+}
+.main .main__container .main__buttons .main__btn-secondary {
+  background: #FFFFFF;
+  border: 1px solid #3D4050;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  padding: 15px 10px;
+  width: 185px;
+  border-radius: 4px;
+  transition: transform 0.3s;
+}
+.main .main__container .main__buttons .main__btn-secondary:hover {
+  transform: scale(1.15);
+}
+
+.order .order__container, .header .header__container, .main .main__container {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.order {
+  background-image: url("./../assets/imeges/orderBg.png");
+  background-size: cover;
+  background-position: center;
+  height: 920px;
+  padding-top: 125px;
+  color: #FFFFFF;
+}
+.order .order__container .order__title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 43px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.order .order__container .order__title span {
+  color: #3E9CDC;
+}
+.order .order__container .order__scheme .scheme__title {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: center;
+  margin-bottom: 80px;
+}
+.order .order__container .order__scheme .scheme__list {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  flex-wrap: wrap;
+  margin-bottom: 80px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+}
+.order .order__container .order__scheme .scheme__list .scheme__item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 210px;
+  position: relative;
+}
+.order .order__container .order__scheme .scheme__list .scheme__item:last-child .scheme__item-bg::after {
+  display: none;
+}
+.order .order__container .order__scheme .scheme__list .scheme__item .scheme__item-bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #3E9CDC;
+  border: 5px solid #286690;
+  margin: 0 auto;
+}
+.order .order__container .order__scheme .scheme__list .scheme__item .scheme__item-bg::after {
+  content: "";
+  display: block;
+  width: 110px;
+  height: 6px;
+  background: url("./../assets/imeges/circle.png");
+  position: absolute;
+  top: 30%;
+  left: 82%;
+}
+.order .order__container .order__scheme .scheme__list .scheme__item .scheme__item-bg .scheme__items-icon {
+  width: 40px;
+  height: 40px;
+  fill: #fff;
+  -o-object-fit: contain;
+  object-fit: contain;
+}/*# sourceMappingURL=index.css.map */
