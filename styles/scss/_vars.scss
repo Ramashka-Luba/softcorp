@@ -6,32 +6,19 @@ $bgcolor: #272733;
 $textColor: #000000;
 $textColorLight: #FFFFFF;
 
-
-
 // Contaier 
 %container { 
-    max-width: 1170px;
+    max-width: 1200px;
     width: 100%;
     margin: 0 auto;
-    // @media screen and (min-width: 576px)  { 
-    //     padding: 0 35px;  
-    // }
-    // @media screen and (min-width: 768px)  { 
-    //     padding: 0 50px;  
-    // }
-    // @media screen and (min-width: 1280px)  { 
-    //     padding: 0; 
-    //     max-width: 1140px;
-    //     width: 100%;
-    //     margin: 0 auto;
-    // }
+    padding: 0 15px;
 }
 
 // Breakpoints
-// $breakpoints: (
-//     xs: 576px,
-//     sm: 768px,
-//     md: 1280px,
-//     lg: 1440px,
-//     xl: 1920px,
-// )
+$breakpoints: (
+    xs: 420px,
+    sm: 576px,
+    md: 768px,
+    lg: 1280px,
+    xl: 1440px,
+)

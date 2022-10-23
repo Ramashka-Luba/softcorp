@@ -2,23 +2,34 @@
 @import "./../mixin";
 
 .main {
-    background-image: url("./../assets/imeges/mainBg.png");
+    background-image: url("./../assets/images/mainBg.png");
     background-size: cover;
     background-position: center;
     height: 850px;
     padding: 203px 0;
     color: $textColor;
+    @include media (md) {
+        padding: 150px 0;
+    }
     .main__container {
         @extend %container;
         .main__title {
-            font-weight: 700;
-            font-size: 48px;
-            line-height: 58px;
+            @include text (48px, 700, 58px);
             text-transform: uppercase;
             max-width: 780px;
             margin-bottom: 80px;
             span {
                 color: $primaryColor;
+            }
+            @include media (md) {
+                @include text (40px, 700, 50px);
+            }
+            @include media (sm) {
+                @include text (30px, 700, 40px);
+            }
+            @include media (xs) {
+                @include text (25px, 700, 35px);
+                margin-bottom: 60px;
             }
         }
         .main__description {

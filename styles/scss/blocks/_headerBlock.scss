@@ -15,25 +15,159 @@
         display: flex;
         justify-content: space-between;
         align-items:center;
+
+//////////////////// burger //////////////////// 
+        .burger {
+            position: absolute;
+            right: 46px;
+            width: 30px;
+            height: 25px;
+            cursor: pointer;
+            z-index: -99;
+            pointer-events: none;
+            opacity: 0;
+            
+            // media
+            @include media (md) {
+                z-index: 99;    
+                pointer-events: all;
+                opacity: 1;
+            }
+
+            & span,
+            & span:before,
+            & span:after {
+                width: 100%;
+                position: absolute;
+                height: 2px;
+                background: #fff;
+                display: block;
+                -webkit-transition: 0.3s;
+                -o-transition: 0.3s;
+                transition: 0.3s;
+                border-radius: 5px;
+            }
+            & span:before {
+                content: "";
+                top: -10px;
+                -webkit-transition: top 300ms 300ms, -webkit-transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+                transition: top 300ms 300ms, -webkit-transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+                -o-transition: top 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+                transition: top 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+                transition: top 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+            }
+            & span {
+                top: 10px;
+            }
+            & span:after {
+                content: "";
+                bottom: -10px;
+                -webkit-transition: bottom 300ms 300ms, -webkit-transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+                transition: bottom 300ms 300ms, -webkit-transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+                -o-transition: bottom 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+                transition: bottom 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+                transition: bottom 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+            }
+            & span.active:before {
+                content: "";
+                top: 0px;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+                -webkit-transition: top 300ms, -webkit-transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                transition: top 300ms, -webkit-transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                -o-transition: top 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                transition: top 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                transition: top 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55), -webkit-transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            }
+            & span.active:after {
+                content: "";
+                bottom: 0;
+                -webkit-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+                -webkit-transition: bottom 300ms, -webkit-transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                transition: bottom 300ms, -webkit-transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                -o-transition: bottom 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                transition: bottom 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                transition: bottom 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55), -webkit-transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            }
+            & span.active {
+                background: transparent;
+            }
+        }
+//////////////////// burger ////////////////////  
+
+
         .header__logo {
-            @include text(28px, 800, 33px); 
+            @include text(28px, 800, 33px);
+            @include media (sm) {
+                @include text(20px, 800, 26px);
+            }
             span {
                 color: $primaryColor;
             }
+
         }
+
         .header__menu {
-            @include text(13px, 600, 16px); 
-            .menu__list {
-                display: flex;
-                .menu__item {
-                    margin-right: 60px;
-                    @include hoverText(); 
-                    &:last-child {
-                        margin-right: 0;
+            @include text(13px, 600, 16px);
+
+            // media
+            @include media (md) {
+                width: 100vw;
+                height: 100vh;
+                background: rgb(16, 16, 29);
+                position: absolute;
+                left: 0px;
+                top: -20px;
+                padding: 20%;
+                -webkit-transform: translatex(200%);
+                -ms-transform: translatex(200%);
+                transform: translatex(200%);
+                -webkit-transition: -webkit-transform 0.6s ease-in-out;
+                transition: -webkit-transform 0.6s ease-in-out;
+                -o-transition: transform 0.6s ease-in-out;
+                transition: transform 0.6s ease-in-out;
+                transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
+                @include text(13px, 400, 50px);
+
+                &.active {
+                    -webkit-transform: translatex(0);
+                    -ms-transform: translatex(0);
+                    transform: translatex(0);
+                }
+            }
+            .header__nav {
+                .menu__nav-list {
+                    display: flex;
+                    @include media (md) {
+                        width: 100%;
+                        -webkit-box-align: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                        -webkit-box-pack: center;
+                        -ms-flex-pack: center;
+                        justify-content: center;
+                        -webkit-box-orient: vertical;
+                        -webkit-box-direction: normal;
+                        -ms-flex-direction: column;
+                        flex-direction: column;
+                        // font-size: 16px;
                     }
-                    .menu__link {
-                        &.active {
-                            color: $primaryColor;
+                    .menu__nav-item {
+                        margin-right: 60px;
+                        @include hoverText();
+                        @include media (md) {
+                            margin-right: 0;
+                        }
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                        .menu__nav-link {
+                            &.active {
+                                color: $primaryColor;
+                            }
                         }
                     }
                 }

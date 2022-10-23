@@ -35,19 +35,22 @@
     }
 }
 
+@mixin icon() {
+    height: 20px;
+    width: 20px;
+    fill: $primaryColor;
+    margin-right: 10px;
+}
 
 
-
-
-
-// @mixin media($width, $type:min) {
-//     @if map_has_key($breakpoints, $width) {
-//         $width: map_get($breakpoints, $width);
-//         @if $type == max {
-//             $width: $width - 1px;
-//         }
-//     }
-//     @media (#{$type}-width: $width) {
-//         @content;
-//     } 
-// }
+@mixin media($width, $type:max) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+        @if $type == max {
+            $width: $width - 1px;
+        }
+    }
+    @media (#{$type}-width: $width) {
+        @content;
+    } 
+}

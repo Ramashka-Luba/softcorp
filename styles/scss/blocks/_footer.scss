@@ -1,0 +1,79 @@
+@import "./../vars";
+@import "./../mixin";
+
+.footer {
+    height: 80px;
+    background-color: $accentColor;
+    @include text(13px, 400, 16px);
+    display: flex;
+    @include media (sm) {
+        height: 150px;
+        padding: 15px 0 25px 0;
+    }
+    .footer__container {
+        @extend %container;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include media (sm) {
+            flex-direction: column;
+        }
+        .footer__copyright {
+            max-width: 280px;
+            @include media (sm) {
+                max-width: 300px;
+            }
+        }
+        .footer__payment {
+            .footer__payment-list {
+                display: flex;
+                .footer__payment-item {
+                    margin-right: 38px;
+                    display: flex;
+                    align-items:center;
+                    &:last-child {
+                        @include media (sm) {
+                            margin-right: 0;
+                        }
+                    }
+                    .footer__payment-icon {
+                        @include icon;
+                    }
+                    span {
+                        @include media (lg) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        .footer__info {
+            .footer__info-list {
+                display: flex;
+                .footer__info-item {
+                    margin-right: 42px;
+                    &:last-child {
+                        @include media (sm) {
+                            margin-right: 0;
+                        }
+                    }
+                }
+                .footer__info-link {
+                    
+                    display: flex;
+                    align-items:center;                
+                    @include hoverText;
+
+                    .footer__info-icon {
+                        @include icon;
+                    }
+                    span {
+                        @include media (lg) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
